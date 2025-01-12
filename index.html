@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Trivia Game</title>
+    <title> quiz webpage</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -61,7 +61,7 @@
     </style>
 </head>
 <body>
-    <h1>Advanced Trivia Game</h1>
+    <h1>Trivia Game</h1>
     <p>Select a difficulty level to start:</p>
     <div class="difficulty">
         <button onclick="startGame('easy')">Easy</button>
@@ -89,7 +89,7 @@
         }
 
         async function fetchQuestions(difficulty) {
-            const url = `https://opentdb.com/api.php?amount=10&difficulty=${difficulty}&type=multiple`;
+            const url = `https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple`;
             try {
                 const response = await fetch(url);
                 const data = await response.json();
@@ -184,3 +184,4 @@
     </script>
 </body>
 </html>
+
